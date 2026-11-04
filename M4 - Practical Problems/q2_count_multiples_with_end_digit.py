@@ -5,6 +5,12 @@ Output: all multiples of n between 1xn and nxn that end in specified digit
 """
 def count_multiples_with_end_digit(n, digit):
     count = 0
+    for x in range(1, n+1):
+        for y in range(1, n+1):
+            mult = x * y
+            if mult % 10 == digit:
+                count += 1
+    return count
 
 """ Test 2 """
 def test_count_multiples_with_end_digit():
