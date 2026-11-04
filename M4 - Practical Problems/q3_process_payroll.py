@@ -6,6 +6,14 @@ Input: 2D list, where each inner list represents an employee
 Output: 2D list, where each inner list contains employee name and total pay
 """
 def process_payroll(employee_hours_worked):
+    employee_pay = [ ]
+    for row in employee_hours_worked:
+        name = row[0]
+        rate = row[1]
+        total_hours = sum(row[2:])
+        pay = rate * total_hours
+        employee_pay.append([name, pay])
+    return employee_pay
     
 
 """ Test 3 """
