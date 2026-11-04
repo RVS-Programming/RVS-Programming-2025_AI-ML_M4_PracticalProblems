@@ -4,12 +4,12 @@ Input: 2D list
 Output: string of all the letters in the list, reading left to right, top to bottom
 """
 def get_alpha_string(lst):
-    string = ""
+        result = ""
     for row in lst:
-        for char in row:
-            if char.isalpha():
-                string += char
-    return string
+        for val in row:
+            if ("a" <= val <= "z") or ("A" <= val <= "Z"):
+                result += val
+    return result
 
 """ Test 1 """
 def test_get_alpha_string():
